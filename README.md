@@ -8,4 +8,5 @@ This is an app which presents the next five days of weather in 3 hour intervals.
 -The object name List in the POJO is not very well named. I would go back and change that.  
 -It could really use some styling.  
 -Display times are pretty ugly. Making it more human-readable would be good.  
--Integration and Unit Tests!  
+-Added more Unit Tests.
+-Integration and UI Tests!  
