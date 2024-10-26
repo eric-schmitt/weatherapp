@@ -80,7 +80,16 @@ class MainActivity : ComponentActivity() {
                 }
 
                 val repoWeatherData = zipRepo.getDataFromCache(zipCode);
-                println(repoWeatherData)
+                if(repoWeatherData!=null) {
+                    val weatherDataString = json.encodeToString(repoWeatherData)
+                    // starting Weather List Activity
+                    startActivity(Intent(scopedContext, WeatherListActivity::class.java).apply {
+                        //Adding string version of weatherData
+                        putExtra("weatherData", weatherDataString)
+                    })
+                } else {
+                    println("Could not find zip data")
+                }
             }
         }
 
