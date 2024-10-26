@@ -25,6 +25,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".WeatherListActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MLBWeatherApp">
+        </activity>
+        <activity
+            android:name=".WeatherDataItemActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MLBWeatherApp">
+        </activity>
     </application>
 
 </manifest>

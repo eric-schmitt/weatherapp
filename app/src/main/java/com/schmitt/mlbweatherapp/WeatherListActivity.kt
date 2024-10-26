@@ -40,6 +40,12 @@ class WeatherListActivity : ComponentActivity() {
     }
 
     fun selectedRow(weatherItem: List) {
-        //Start next Activity with Weather Data
+        val json = Json { ignoreUnknownKeys = true }
+        val weatherItemString = json.encodeToString(weatherItem)
+        // starting Weather List Activity
+        startActivity(Intent(this, WeatherDataItemActivity::class.java).apply {
+            //Adding string version of weatherData
+            putExtra("weatherItem", weatherItemString)
+        })
     }
 }
